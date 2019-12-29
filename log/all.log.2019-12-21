@@ -1,0 +1,66 @@
+[10:41:31,328] [INFO] ServerMain.main --> 服务器启动成功！
+[10:42:19,906] [INFO] ServerMain.main --> 服务器启动成功！
+[11:49:15,371] [INFO] ServerMain.main --> 服务器启动成功！
+[11:49:26,658] [WARN] DefaultChannelPipeline.onUnhandledInboundException --> An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.ClassCastException: org.tinygame.herostory.msg.GameMsgProtocol$UserEntryCmd cannot be cast to io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame
+	at org.tinygame.herostory.GameMsghandler.channelRead0(GameMsghandler.java:18)
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at org.tinygame.herostory.GameMsgDecoder.channelRead(GameMsgDecoder.java:40)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.Utf8FrameValidator.channelRead(Utf8FrameValidator.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler$1.channelRead(WebSocketServerProtocolHandler.java:272)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:326)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:313)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:427)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:745)
+[11:52:04,168] [INFO] ServerMain.main --> 服务器启动成功！
+[12:37:22,841] [INFO] ServerMain.main --> 服务器启动成功！
+[12:38:45,422] [INFO] ServerMain.main --> 服务器启动成功！
+[13:10:39,233] [INFO] ServerMain.main --> 服务器启动成功！
+[13:11:16,460] [INFO] ServerMain.main --> 服务器启动成功！
+[13:16:07,480] [INFO] ServerMain.main --> 服务器启动成功！
+[13:31:26,413] [INFO] ServerMain.main --> 服务器启动成功！
+[13:54:03,216] [INFO] ServerMain.main --> 服务器启动成功！
+[21:09:08,889] [INFO] ServerMain.main --> 服务器启动成功！
+[21:10:35,122] [INFO] ServerMain.main --> 服务器启动成功！
+[21:10:48,445] [INFO] ServerMain.main --> 服务器启动成功！
+[21:15:26,678] [INFO] ServerMain.main --> 服务器启动成功！
+[21:26:09,941] [INFO] ServerMain.main --> 服务器启动成功！
+[21:29:33,229] [INFO] ServerMain.main --> 服务器启动成功！
+[21:37:27,278] [INFO] ServerMain.main --> 服务器启动成功！
+[21:55:12,216] [INFO] ServerMain.main --> 服务器启动成功！
+[22:00:16,710] [INFO] ServerMain.main --> 服务器启动成功！
+[22:02:05,497] [INFO] ServerMain.main --> 服务器启动成功！
+[23:57:52,115] [INFO] ServerMain.main --> 服务器启动成功！
