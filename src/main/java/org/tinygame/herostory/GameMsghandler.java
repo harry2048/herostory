@@ -4,8 +4,8 @@ import com.google.protobuf.GeneratedMessageV3;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
-import org.tinygame.herostory.cmdHandler.CmdHandlerFactory;
-import org.tinygame.herostory.cmdHandler.ICmdHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.tinygame.herostory.model.UserManager;
 import org.tinygame.herostory.msg.GameMsgProtocol;
 
@@ -15,6 +15,8 @@ import org.tinygame.herostory.msg.GameMsgProtocol;
  * @Description:
  */
 public class GameMsghandler extends SimpleChannelInboundHandler<Object> {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(GameMsghandler.class);
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception{
@@ -49,14 +51,20 @@ public class GameMsghandler extends SimpleChannelInboundHandler<Object> {
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("收到客户端消息：msgClazz =" +msg.getClass().getName()+", msg ="+ msg);
+    protected void channelRead0(ChannelHandlerContext ctx, Object msg) {
+//        System.out.println("收到客户端消息：msgClazz =" +msg.getClass().getName()+", msg ="+ msg);
+//        // 工厂模式，我只需要指令处理器，但不需要知道哪个业务指令处理器
+//        // 获取指令处理器
+//        ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msg.getClass());
+//
+//        if (null != cmdHandler) {
+//            cmdHandler.handle(ctx, cast(msg));
+//        }
 
-        // 工厂模式，我只需要指令处理器，但不需要知道哪个业务指令处理器
-        ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msg.getClass());
 
-        if (null != cmdHandler) {
-            cmdHandler.handle(ctx, cast(msg));
+
+        if (msg instanceof GeneratedMessageV3) {
+            MainThreadProcessor.getInstance().process(ctx, cast(msg));
         }
     }
 

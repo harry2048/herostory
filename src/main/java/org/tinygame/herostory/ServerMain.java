@@ -34,6 +34,10 @@ public class ServerMain {
          * 初始化消息识别器
          */
         GameMsgRecognizer.init();
+        /**
+         * 初始化SQLSessionFactory
+         */
+        MySqlSessionFactory.init();
 
         /**
          * 处理客户端连接，客户端有连接的时候，建立SocketChannel交给workGroup

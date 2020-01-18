@@ -51,6 +51,7 @@ public final class CmdHandlerFactory {
 
                 // 拿到handler函数必须是俩个参数，并且第二个参数必须是GeneratedMessageV3
                 if (paramTypeArray.length < 2 ||
+                    paramTypeArray[1] == GeneratedMessageV3.class || // 这里最好加上这个判断,不加会出错,无攻击效果
                     !GeneratedMessageV3.class.isAssignableFrom(paramTypeArray[1])) {
                     continue;
                 }
